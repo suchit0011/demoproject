@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+      
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+                <a class="nav-link" routerLink=""><button>ApiData</button></a>
+              </li>
+          <li class="nav-item ">
+            <a class="nav-link text-dark" ><button (click)="logout()">Logout</button></a>
+          </li>
+        </ul>
+  </nav>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="table-responsive">
+        <table id="tabledata_id" class="table display">
+            
+            <thead class="thead">
+              <tr >
+                <th scope="col">amount</th>
+                <th scope="col">buy</th>
+                <th scope="col">price</th>
+                <th scope="col">timestamp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <ng-container *ngIf="blankdata;else blankvalue"> -->
+              <tr  *ngFor="let dummyValue of dummyData">
+                <td>{{dummyValue.amount}}</td>
+                <td>{{dummyValue.buy}}</td>
+                <td>{{dummyValue.price}}</td>
+                <td>{{dummyValue.timestamp}}</td>
+              </tr>
+            <!-- </ng-container> -->
+            <!-- <ng-template #blankvalue>
+              <tr><td class="text-center text-danger" colspan="4">{{blankdata_msg}}</td></tr>
+              <tr><td class="text-center" colspan="4" ><a routerLink="/userdata"><button>Check Dummy Data</button></a></td></tr>
+          </ng-template>   -->
+            </tbody>
+           
+          </table>
+          
+      </div>
+    </div>
+  </div>
+  
+  
